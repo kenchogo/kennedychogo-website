@@ -1,1 +1,89 @@
-<html><head><link rel='stylesheet' href='styles.css'><title>KennyBot</title></head><body><h1>KennyBot™</h1><p>Your strategic protection assistant. Future AI integration ready.</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KennyBot™ AI Assistant | Kennedy Chogo LLC</title>
+    <meta name="description" content="Engage KennyBot™, our private corporate intelligence and strategic protection AI simulator for real-time risk advisory modeling.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght=500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body class="dark-bg h-screen flex-column">
+
+    <header class="main-header no-shrink">
+        <div class="container header-container">
+            <a href="index.html" class="logo-area">
+                <img src="images/logo.png" alt="Kennedy Chogo LLC Logo" class="nav-logo">
+                <div class="brand-text"><span class="brand-name">KENNEDY CHOGO LLC</span><span class="brand-tagline">STRATEGIC PROTECTION</span></div>
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="industries.html" class="nav-link">Industries</a>
+                <a href="insights.html" class="nav-link">Insights</a>
+                <a href="kennybot.html" class="nav-link active">KennyBot™</a>
+                <a href="contact.html" class="cta-button-nav">Consultation</a>
+            </nav>
+            <button class="mobile-toggle" aria-label="Toggle Navigation"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-menu-drawer">
+        <nav class="mobile-nav-links">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="industries.html" class="mobile-link">Industries</a>
+            <a href="insights.html" class="mobile-link">Insights</a>
+            <a href="kennybot.html" class="mobile-link active">KennyBot™</a>
+            <a href="contact.html" class="mobile-cta">Schedule Consultation</a>
+        </nav>
+    </div>
+
+    <!-- Chat Workspace Area -->
+    <main class="chat-workspace flex-grow container">
+        <div class="chat-wrapper card">
+            <div class="chat-header">
+                <div class="bot-info">
+                    <div class="bot-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div>
+                        <h3>KennyBot™</h3>
+                        <span class="bot-subtitle">Your Strategic Protection Assistant</span>
+                    </div>
+                </div>
+                <div class="security-clearance-badge"><i class="fa-solid fa-circle-check"></i> SECURE INTERACTION ENCRYPTED</div>
+            </div>
+            
+            <div class="chat-messages-container" id="chatContainer">
+                <div class="message system-msg">
+                    <p><i class="fa-solid fa-triangle-exclamation"></i> <strong>Operational Parameters Notice:</strong> This terminal provides real-time strategic advisory analysis simulations regarding advanced executive protection metrics, sovereign risk metrics, and East Africa corporate compliance structures.</p>
+                </div>
+                <div class="message bot-msg">
+                    <p>Welcome to the Kennedy Chogo LLC secure intelligence terminal. I am <strong>KennyBot™</strong>, an advanced AI operational simulator calibrated to guide your firm through complex threat architectures.</p>
+                    <p class="small mt-1 text-silver">Select an encrypted advisory channel below or query directly:</p>
+                    <div class="suggested-prompts-row">
+                        <button class="suggest-btn" onclick="sendSuggested('Outline corporate travel security matrices for East Africa.')">East Africa Logistical Risk</button>
+                        <button class="suggest-btn" onclick="sendSuggested('What are the advantages of custom HTML security architecture vs guard hiring?')">Strategic Protection Modality</button>
+                        <button class="suggest-btn" onclick="sendSuggested('How do I submit an emergency close protection advisory query?')">Request Emergency Advisory</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-bar">
+                <form id="kennyForm" class="flex w-full gap-1">
+                    <input type="text" id="userInput" placeholder="Query secure strategic protection database..." autocomplete="off" required>
+                    <button type="submit" class="chat-submit-btn" aria-label="Send Query"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,67 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Kennedy Chogo LLC</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Initiate a secure consultation with Kennedy Chogo LLC. Secure corporate office location, direct verification line, and project intake form.">
+    <title>Contact Strategy Team | Kennedy Chogo LLC</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-<div class="container">
-<nav class="navbar">
-<a href="index.html" class="logo">KC<span>LLC</span></a>
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-</div>
-</header>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo" aria-label="Kennedy Chogo LLC Home">
+                <div class="logo-fallback">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="4" fill="#d4af37"/><path d="M9 8H13L19 16L13 24H9L15 16L9 8Z" fill="#0f172a"/><path d="M18 8H22V24H18V8Z" fill="#0f172a"/></svg>
+                    <span>KENNEDY CHOGO</span> LLC
+                </div>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<section>
+    <section class="page-banner">
+        <div class="container">
+            <h1 class="reveal">Contact Kennedy Chogo LLC</h1>
+        </div>
+    </section>
 
-<div class="container">
+    <section class="section-padding">
+        <div class="container">
+            <div class="contact-layout">
+                
+                <!-- Explicit Location and Communication Channels -->
+                <div class="contact-details reveal">
+                    <h3>Office Framework</h3>
+                    
+                    <div class="info-block">
+                        <h4>Email</h4>
+                        <p><a href="mailto:sale@kennedychogo.com">sale@kennedychogo.com</a></p>
+                    </div>
 
-<div class="section-title">
-<h2>Contact Us</h2>
-<p>Speak with our team regarding your security and advisory requirements.</p>
-</div>
+                    <div class="info-block">
+                        <h4>Phone</h4>
+                        <p><a href="tel:6822266628">(682) 226-6628</a></p>
+                    </div>
 
-<div class="contact-box">
+                    <div class="info-block">
+                        <h4>Office Location</h4>
+                        <p style="line-height: 1.7;">
+                            Canal Center<br>
+                            400 Las Colinas Blvd East<br>
+                            Suite 300<br>
+                            Irving, TX 75039<br>
+                            United States
+                        </p>
+                    </div>
+                </div>
 
-<h3>Business Inquiries</h3>
+                <!-- Structured Consulting Engagement Intake Form -->
+                <div class="contact-form-container reveal">
+                    <form action="https://formspree.io/f/sale@kennedychogo.com" method="POST">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="organization">Organization</label>
+                                <input type="text" id="organization" name="organization" required autocomplete="organization">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="_replyto" required autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                            </div>
+                            <div class="form-group sheet-full form-group-full">
+                                <label for="inquiry_type">Inquiry Type</label>
+                                <select id="inquiry_type" name="inquiry_type" required>
+                                    <option value="" disabled selected>Select service spectrum...</option>
+                                    <option value="Security Consulting">Security Consulting</option>
+                                    <option value="Executive Protection Advisory">Executive Protection Advisory</option>
+                                    <option value="Investigations">Investigations</option>
+                                    <option value="Risk Management">Risk Management</option>
+                                    <option value="East Africa Advisory">East Africa Advisory</option>
+                                    <option value="Strategic Intelligence">Strategic Intelligence</option>
+                                </select>
+                            </div>
+                            <div class="form-group sheet-full form-group-full">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                        </div>
+                        <input type="hidden" name="_subject" value="New Website Consultation Engagement Request">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; border: none;">Submit Consultation Request</button>
+                    </form>
+                </div>
 
-<p><strong>Email:</strong> sale@kennedychogo.com</p>
+            </div>
+        </div>
+    </section>
 
-<p><strong>Consulting:</strong> consulting@kennedychogo.com</p>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-fallback" style="font-size: 1.2rem;">
+                        <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="4" fill="#d4af37"/><path d="M9 8H13L19 16L13 24H9L15 16L9 8Z" fill="#0f172a"/><path d="M18 8H22V24H18V8Z" fill="#0f172a"/></svg>
+                        <span>KENNEDY CHOGO</span> LLC
+                    </div>
+                    <p>High-level tactical advisory and corporate structural risk protection services across the United States, East Africa, and global corridors.</p>
+                </div>
+                <div>
+                    <h4 class="footer-header">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-header">Headquarters</h4>
+                    <div class="footer-contact">
+                        <p>Canal Center<br>400 Las Colinas Blvd East<br>Suite 300<br>Irving, TX 75039</p>
+                        <a href="mailto:sale@kennedychogo.com">sale@kennedychogo.com</a>
+                        <a href="tel:6822266628">(682) 226-6628</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kennedy Chogo LLC. All Rights Reserved.</p>
+                <p style="text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.75rem; color: #475569;">Executive Protection & Security Advisory</p>
+            </div>
+        </div>
+    </footer>
 
-<p><strong>Office:</strong> Dallas–Fort Worth, Texas, USA</p>
-
-<p><strong>East Africa Advisory Desk:</strong> Nairobi, Kenya</p>
-
-<br>
-
-<a href="mailto:sale@kennedychogo.com" class="btn btn-primary">
-Email Our Team
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-<div class="container">
-<h3>Kennedy Chogo <span>LLC</span></h3>
-<p>Strategic Protection • Security Consulting • Executive Protection</p>
-</div>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

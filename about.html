@@ -1,64 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | Kennedy Chogo LLC</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the foundational experience of Kennedy Chogo LLC, combining over 23 years of specialized advisory across global security environments.">
+    <title>About Us | Kennedy Chogo LLC</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-<div class="container">
-<nav class="navbar">
-<a href="index.html" class="logo">KC<span>LLC</span></a>
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-</div>
-</header>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo" aria-label="Kennedy Chogo LLC Home">
+                <div class="logo-fallback">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="4" fill="#d4af37"/><path d="M9 8H13L19 16L13 24H9L15 16L9 8Z" fill="#0f172a"/><path d="M18 8H22V24H18V8Z" fill="#0f172a"/></svg>
+                    <span>KENNEDY CHOGO</span> LLC
+                </div>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<section>
-<div class="container">
+    <section class="page-banner">
+        <div class="container">
+            <h1 class="reveal">About Kennedy Chogo LLC</h1>
+        </div>
+    </section>
 
-<div class="section-title">
-<h2>About Kennedy Chogo LLC</h2>
-<p>Strategic protection, intelligence, and risk advisory services.</p>
-</div>
+    <section class="section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="reveal" style="font-size: 1.15rem; line-height: 1.8;">
+                    <p style="margin-bottom: 2rem; color: var(--primary); font-weight: 500;">Kennedy Chogo LLC is a Texas-based security consulting and advisory firm helping organizations, executives, investors, and private clients identify risks, improve preparedness, strengthen protection measures, and make informed decisions.</p>
+                    <p>The company combines more than 23 years of security experience with practical advisory expertise across corporate environments, executive protection operations, investigations, intelligence support, and East Africa advisory services.</p>
+                </div>
+                <div class="experience-badge reveal">
+                    <h3>23+ Years</h3>
+                    <p>Professional Security Experience Within Specialized Operational Theaters</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="card">
-<p>
-Kennedy Chogo LLC is a security consulting and advisory firm focused on helping organizations, executives, investors, and private clients identify risks, strengthen protection measures, and operate confidently in changing environments.
-</p>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-fallback" style="font-size: 1.2rem;">
+                        <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="4" fill="#d4af37"/><path d="M9 8H13L19 16L13 24H9L15 16L9 8Z" fill="#0f172a"/><path d="M18 8H22V24H18V8Z" fill="#0f172a"/></svg>
+                        <span>KENNEDY CHOGO</span> LLC
+                    </div>
+                    <p>High-level tactical advisory and corporate structural risk protection services across the United States, East Africa, and global corridors.</p>
+                </div>
+                <div>
+                    <h4 class="footer-header">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-header">Headquarters</h4>
+                    <div class="footer-contact">
+                        <p>Canal Center<br>400 Las Colinas Blvd East<br>Suite 300<br>Irving, TX 75039</p>
+                        <a href="mailto:sale@kennedychogo.com">sale@kennedychogo.com</a>
+                        <a href="tel:6822266628">(682) 226-6628</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kennedy Chogo LLC. All Rights Reserved.</p>
+                <p style="text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.75rem; color: #475569;">Executive Protection & Security Advisory</p>
+            </div>
+        </div>
+    </footer>
 
-<br>
-
-<p>
-Our approach combines security consulting, executive protection advisory, investigations, intelligence research, and regional expertise to provide practical solutions for real-world challenges.
-</p>
-
-<br>
-
-<p>
-We believe effective security begins with awareness, preparation, and informed decision-making. Our mission is to help clients anticipate challenges before they become crises.
-</p>
-
-</div>
-
-</div>
-</section>
-
-<footer>
-<div class="container">
-<h3>Kennedy Chogo <span>LLC</span></h3>
-<p>Strategic Protection • Security Consulting • Executive Protection</p>
-</div>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

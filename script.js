@@ -1,58 +1,27 @@
-/**
- * KENNEDY CHOGO LLC - INDUSTRIAL GRADE COMPONENT LOGIC (VANILLA JS)
- */
-
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Sticky Header Navigation Transformation Matrix
-    const header = document.querySelector('header');
-    const handleScroll = () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    };
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Trigger instantly on mount execution
+    const consultationForm = document.getElementById('consultationForm');
+    const formFeedback = document.getElementById('formFeedback');
 
-    // Responsive Mobile Drawer Controller
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
+    if (consultationForm) {
+        consultationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formFeedback.className = 'form-feedback';
+            formFeedback.textContent = '';
 
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
-        });
+            const name = document.getElementById('clientName').value.trim();
+            const email = document.getElementById('clientEmail').value.trim();
+            const needs = document.getElementById('securityNeeds').value.trim();
 
-        // Auto-close menu drawer when navigating local tree
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            });
+            if (!name || !email || !needs) {
+                formFeedback.textContent = 'All fields are required.';
+                formFeedback.classList.add('error');
+                return;
+            }
+
+            // Client-side execution simulated placeholder
+            formFeedback.textContent = 'Thank you. Your consultation request has been received.';
+            formFeedback.classList.add('success');
+            consultationForm.reset();
         });
     }
-
-    // High-Performance Native Scroll Animation (Intersection Observer API)
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Execution fire limit (once)
-            }
-        });
-    }, {
-        root: null,
-        threshold: 0.15,
-        rootMargin: '0px'
-    });
-
-    revealElements.forEach(element => {
-        revealObserver.observe(element);
-    });
 });

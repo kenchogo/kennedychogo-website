@@ -3,167 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore our specialized security disciplines including Executive Protection Planning, Investigations, Risk Management, and East Africa Market Orientation.">
-    <title>Services & Capabilities | Kennedy Chogo LLC</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Services | Kennedy Chogo LLC</title>
+    <style>
+        :root {
+            --primary-blue: #0A192F;
+            --accent-gold: #D4AF37;
+            --text-light: #F4F6F9;
+            --text-dark: #1E293B;
+            --card-bg: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-blue);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #071120;
+            padding: 1.2rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent-gold);
+        }
+
+        .logo {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-gold);
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        h1.page-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            color: var(--text-light);
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h1.page-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-gold);
+            margin: 0.5rem auto 0;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            color: var(--text-dark);
+            padding: 2.5rem;
+            border-radius: 6px;
+            border-top: 5px solid var(--accent-gold);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+        }
+
+        .service-card h2 {
+            font-size: 1.4rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #64748B;
+            margin-bottom: 1.2rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+        }
+
+        .service-card ul li {
+            font-size: 0.95rem;
+            margin-bottom: 0.6rem;
+            position: relative;
+            padding-left: 1.5rem;
+            color: #334155;
+        }
+
+        .service-card ul li::before {
+            content: "▪";
+            color: var(--accent-gold);
+            position: absolute;
+            left: 0;
+            font-size: 1.1rem;
+            top: -2px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #071120;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #94A3B8;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Add responsive mobile menu logic here if needed */
+            }
+            h1.page-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <div class="container nav-container">
-            <a href="index.html" class="logo" aria-label="Kennedy Chogo LLC Home">
-                <div class="logo-fallback">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="4" fill="#d4af37"/><path d="M9 8H13L19 16L13 24H9L15 16L9 8Z" fill="#0f172a"/><path d="M18 8H22V24H18V8Z" fill="#0f172a"/></svg>
-                    <span>KENNEDY CHOGO</span> LLC
-                </div>
-            </a>
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
-                <span></span><span></span><span></span>
-            </button>
-            <nav>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="services.html" class="nav-link active">Services</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Kennedy Chogo <span>LLC</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Services Content -->
+    <div class="container">
+        <h1 class="page-title">Services</h1>
+        
+        <div class="services-grid">
+            
+            <!-- Security Consulting -->
+            <div class="service-card">
+                <h2>Security Consulting</h2>
+                <p>Comprehensive risk and strategic assessments tailored for high-stakes environments.</p>
+                <ul>
+                    <li>Risk assessments</li>
+                    <li>Vulnerability reviews</li>
+                    <li>Security planning</li>
+                    <li>Operational reviews</li>
+                    <li>Protective recommendations</li>
                 </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="page-banner">
-        <div class="container">
-            <h1 class="reveal">Our Professional Capabilities</h1>
-        </div>
-    </section>
-
-    <section class="section-padding" style="background-color: var(--bg-light);">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Advisory Disciplines</h2>
-                <p style="margin-top: 1rem; font-size: 1.1rem;">Intelligence-led strategies designed to protect high-value assets, corporate personnel, and physical operations.</p>
             </div>
 
-            <div class="services-grid">
-                <!-- 1. Security Consulting -->
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <h3>1. Security Consulting</h3>
-                    <ul class="service-features">
-                        <li>Risk assessments</li>
-                        <li>Vulnerability reviews</li>
-                        <li>Security planning</li>
-                        <li>Operational analysis</li>
-                    </ul>
-                </div>
-
-                <!-- 2. Executive Protection Advisory -->
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
-                    <h3>2. Executive Protection Advisory</h3>
-                    <ul class="service-features">
-                        <li>Protective planning</li>
-                        <li>Travel security guidance</li>
-                        <li>Executive risk assessments</li>
-                    </ul>
-                </div>
-
-                <!-- 3. Investigations -->
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    </div>
-                    <h3>3. Investigations</h3>
-                    <ul class="service-features">
-                        <li>Due diligence</li>
-                        <li>Fact finding</li>
-                        <li>Research support</li>
-                        <li>Intelligence gathering</li>
-                    </ul>
-                </div>
-
-                <!-- 4. Risk Management -->
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
-                    </div>
-                    <h3>4. Risk Management</h3>
-                    <ul class="service-features">
-                        <li>Threat identification</li>
-                        <li>Mitigation planning</li>
-                        <li>Business continuity guidance</li>
-                    </ul>
-                </div>
-
-                <!-- 5. East Africa Advisory -->
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10h-10V2z"/></svg>
-                    </div>
-                    <h3>5. East Africa Advisory</h3>
-                    <ul class="service-features">
-                        <li>Kenya market orientation</li>
-                        <li>Cultural guidance</li>
-                        <li>Regional intelligence</li>
-                        <li>Business introductions</li>
-                    </ul>
-                </div>
-
-                <!-- 6. Strategic Intelligence -->
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-                    </div>
-                    <h3>6. Strategic Intelligence</h3>
-                    <ul class="service-features">
-                        <li>Intelligence research</li>
-                        <li>Situational awareness</li>
-                        <li>Decision support</li>
-                    </ul>
-                </div>
+            <!-- Executive Protection Advisory -->
+            <div class="service-card">
+                <h2>Executive Protection Advisory</h2>
+                <p>High-level tactical blueprints and strategic guidance for corporate leaders and principals.</p>
+                <ul>
+                    <li>Protective planning</li>
+                    <li>Travel security guidance</li>
+                    <li>Executive risk assessments</li>
+                    <li>Protective strategy recommendations</li>
+                </ul>
             </div>
-        </div>
-    </section>
 
+            <!-- Investigations Support -->
+            <div class="service-card">
+                <h2>Investigations Support</h2>
+                <p>Advanced informational support and strict due diligence for complex decision-making.</p>
+                <ul>
+                    <li>Due diligence</li>
+                    <li>Research support</li>
+                    <li>Information gathering</li>
+                    <li>Background research</li>
+                    <li>Fact-finding assistance</li>
+                </ul>
+            </div>
+
+            <!-- Risk Management -->
+            <div class="service-card">
+                <h2>Risk Management</h2>
+                <p>Proactive models designed to intercept vulnerabilities and protect organizational continuity.</p>
+                <ul>
+                    <li>Risk identification</li>
+                    <li>Threat analysis</li>
+                    <li>Mitigation planning</li>
+                    <li>Business continuity guidance</li>
+                </ul>
+            </div>
+
+            <!-- East Africa Advisory -->
+            <div class="service-card">
+                <h2>East Africa Advisory</h2>
+                <p>Strategic positioning, market entry insight, and regional navigate dynamics across Kenya and broader East Africa.</p>
+                <ul>
+                    <li>Kenya market orientation</li>
+                    <li>Regional insight</li>
+                    <li>Cultural guidance</li>
+                    <li>Business navigation support</li>
+                    <li>Business introductions</li>
+                    <li>East Africa advisory support</li>
+                </ul>
+            </div>
+
+            <!-- Strategic Intelligence -->
+            <div class="service-card">
+                <h2>Strategic Intelligence</h2>
+                <p>Actionable intelligence analysis providing high-fidelity decision support and deep situational awareness.</p>
+                <ul>
+                    <li>Intellectual research</li>
+                    <li>Situational awareness</li>
+                    <li>Information analysis</li>
+                    <li>Decision support</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo-fallback" style="font-size: 1.2rem;">
-                        <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="4" fill="#d4af37"/><path d="M9 8H13L19 16L13 24H9L15 16L9 8Z" fill="#0f172a"/><path d="M18 8H22V24H18V8Z" fill="#0f172a"/></svg>
-                        <span>KENNEDY CHOGO</span> LLC
-                    </div>
-                    <p>High-level tactical advisory and corporate structural risk protection services across the United States, East Africa, and global corridors.</p>
-                </div>
-                <div>
-                    <h4 class="footer-header">Navigation</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="footer-header">Headquarters</h4>
-                    <div class="footer-contact">
-                        <p>Canal Center<br>400 Las Colinas Blvd East<br>Suite 300<br>Irving, TX 75039</p>
-                        <a href="mailto:sale@kennedychogo.com">sale@kennedychogo.com</a>
-                        <a href="tel:6822266628">(682) 226-6628</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Kennedy Chogo LLC. All Rights Reserved.</p>
-                <p style="text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.75rem; color: #475569;">Executive Protection & Security Advisory</p>
-            </div>
-        </div>
+        <p>&copy; 2026 Kennedy Chogo LLC. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
